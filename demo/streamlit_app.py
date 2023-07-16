@@ -6,7 +6,7 @@ import requests
 import streamlit as st
 from PIL import Image
 
-from streamlit_image_select import image_select
+from streamlit_dash import image_select
 
 
 def add_sunglasses(img, position):
@@ -28,7 +28,7 @@ def add_sunglasses(img, position):
     return pil_img
 
 
-st.set_page_config("Demo for streamlit-image-select", "🖼️")
+st.set_page_config("Demo for streamlit-dash", "🖼️")
 
 
 st.write(
@@ -36,10 +36,10 @@ st.write(
     unsafe_allow_html=True,
 )
 """
-# Demo for [streamlit-image-select](https://github.com/jrieke/streamlit-image-select)
+# Demo for [streamlit-dash](https://github.com/jrieke/streamlit-dash)
 ## Step 1
 """
-st.code("pip install streamlit-image-select")
+st.code("pip install streamlit-dash")
 
 """
 ## Step 2: Create the component
@@ -48,7 +48,7 @@ arrays. You can also add captions (optional)!
 """
 
 with st.echo():
-    from streamlit_image_select import image_select
+    from streamlit_dash import image_select
 
     imgs = image_select(
         label="Select a cat",
@@ -61,6 +61,7 @@ with st.echo():
         captions=["A cat", "Another cat", "Oh look, a cat!", "Guess what, a cat..."],
         indices=None
     )
+    print(imgs)
 
 # st.file_uploader("Or upload your own cat!", type=["jpg", "jpeg", "png"])
 # "https://bagongkia.github.io/react-image-picker/6c800cccebf18c24f51d5fd411818ac8.jpg",
@@ -123,5 +124,5 @@ st.help(image_select)
 
 """
 ## Step 5
-[![Star](https://img.shields.io/github/stars/jrieke/streamlit-image-select?style=social)](https://github.com/jrieke/streamlit-image-select)
+[![Star](https://img.shields.io/github/stars/jrieke/streamlit-dash?style=social)](https://github.com/jrieke/streamlit-dash)
 """
