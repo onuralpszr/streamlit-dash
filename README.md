@@ -1,29 +1,17 @@
-# streamlit-image-select 🖼️
+# streamlit-dash
 
-[![PyPI](https://img.shields.io/pypi/v/streamlit-image-select)](https://pypi.org/project/streamlit-image-select/)
+[![PyPI](https://img.shields.io/pypi/v/streamlit-dash)](https://pypi.org/project/streamlit-dash/)
 
 **An image select component for Streamlit.**
 
 This custom component works just like `st.selectbox` but with images. It's a great option
 if you want to let the user select an example image, e.g. for a computer vision app!
 
----
-
-<h3 align="center">
-  🏃 <a href="https://image-select.streamlitapp.com/">Try out the demo app</a> 🏃
-</h3>
-
----
-
-<p align="center">
-    <a href="https://image-select.streamlitapp.com/"><img src="images/demo.gif" width=600></a>
-</p>
-
 
 ## Installation
 
 ```bash
-pip install streamlit-image-select
+pip install streamlit-dash
 ```
 
 ## Usage
@@ -33,9 +21,6 @@ from streamlit_image_select import image_select
 img = image_select("Label", ["image1.png", "image2.png", "image3.png"])
 st.write(img)
 ```
-
-See [the demo app](https://image-select.streamlitapp.com/) for a detailed guide!
-
 
 ## Development
 
@@ -48,8 +33,8 @@ contribute to its development!
 First, clone the repository:
 
 ```bash
-git clone https://github.com/jrieke/streamlit-image-select.git
-cd streamlit-image-select
+git clone https://github.com/jrieke/streamlit-dash.git
+cd streamlit-dash
 ```
 
 Install the Python dependencies:
