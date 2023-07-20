@@ -17,7 +17,7 @@ pip install streamlit-dash
 ## Usage
 
 ```python
-from streamlit_image_select import image_select
+from streamlit_dash import image_select
 img = image_select("Label", ["image1.png", "image2.png", "image3.png"])
 st.write(img)
 ```
@@ -46,20 +46,20 @@ poetry install --dev
 And install the frontend dependencies:
 
 ```bash
-cd streamlit_image_select/frontend
+cd streamlit_dash/frontend
 npm install
 ```
 
 ### Making changes
 
-To make changes, first go to `streamlit_image_select/__init__.py` and make sure the 
+To make changes, first go to `streamlit_dash/__init__.py` and make sure the 
 variable `_RELEASE` is set to `False`. This will make the component use the local 
 version of the frontend code, and not the built project. 
 
 Then, start one terminal and run:
 
 ```bash
-cd streamlit_image_select/frontend
+cd streamlit_dash/frontend
 npm start
 ```
 
@@ -75,21 +75,21 @@ streamlit run streamlit_app.py
 
 This copies the demo app to the root dir (so you have something to work with and see 
 your changes!) and then starts it. Now you can make changes to the Python or Javascript 
-code in `streamlit_image_select` and the demo app should update automatically!
+code in `streamlit_dash` and the demo app should update automatically!
 
-If nothing updates, make sure the variable `_RELEASE` in `streamlit_image_select/__init__.py` is set to `False`. 
+If nothing updates, make sure the variable `_RELEASE` in `streamlit_dash/__init__.py` is set to `False`. 
 
 
 ### Publishing on PyPI
 
-Switch the variable `_RELEASE` in `streamlit_image_select/__init__.py` to `True`. 
+Switch the variable `_RELEASE` in `streamlit_dash/__init__.py` to `True`. 
 Increment the version number in `pyproject.toml`. Make sure the copy of the demo app in 
 the root dir is deleted or merged back into the demo app in `demo/streamlit_app.py`.
 
 Build the frontend code with:
 
 ```bash
-cd streamlit_image_select/frontend
+cd streamlit_dash/frontend
 npm run build
 ```
 
